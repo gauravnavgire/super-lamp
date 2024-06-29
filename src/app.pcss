@@ -1,0 +1,27 @@
+/* Write your global styles here, in PostCSS syntax */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.toast-success {
+  @apply border p-4 bg-red-500 text-red-500;
+}
+
+html {
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+/* NATIVE VIEW TRANSITIONS API */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 0.25s;
+}
